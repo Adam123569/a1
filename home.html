@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ff5722;
+        }
+        .content {
+            padding: 20px;
+            text-align: left;
+        }
+        .games {
+            background-color: #e0f7fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .game-item {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+        .game-item:hover {
+            transform: scale(1.05);
+            background-color: #ffe0b2;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <img src="img_avatar.png" alt="Avatar">
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#games">Games I Like</a>
+        </nav>
+    </header>
+    <div class="content">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I am Adam, a passionate developer with a love for creating beautiful and functional web applications.</p>
+        </section>
+        <section id="projects">
+            <h2>Some Acomplishments I've Made </h2>
+            <p>Here are some of my projects:</p>
+            <ul>
+                <li>HHPP-A Project</li>
+                <li>Guide To My Country</li>
+                <li>Pixel Coloring</li>
+            </ul>
+        </section>
+        <section id="games" class="games">
+            <h2>Games I Like to Play</h2>
+            <div class="game-item">Limbus Company</div>
+            <div class="game-item">Lobotomy Corpration</div>
+            <div class="game-item">Library Of Runia</div>
+            <div class="game-item">Hoyoverse</div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const gameItems = document.querySelectorAll('.game-item');
+            gameItems.forEach(item => {
+                item.onclick = function() {
+                    alert('You clicked on ' + this.textContent);
+                };
+            });
+        });
+    </script>
+</body>
+</html>
